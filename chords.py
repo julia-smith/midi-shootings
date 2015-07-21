@@ -3,7 +3,7 @@ from miditime.MIDITime import MIDITime
 
 # Instantiate the class with a tempo (120bpm is the default), an output file destination, number of seconds to represent a year, base octave (5 is Middle C), and octave range.
 #mymidi = MIDITime(120, 'chords.mid')
-mymidi = MIDITime(120, 'chords.mid', 12, 3, 2)
+mymidi = MIDITime(120, 'chords.mid', 12, 3, 4)
 
 # Create a list of notes. Each note is a list: [time, pitch, attack, duration]
 # midinotes = [
@@ -132,7 +132,7 @@ def mag_to_pitch_tuned(fatalities):
     c_penta_minor = ['C', 'Eb', 'F', 'G', 'Bb']
 
     #Find the note that matches your data point
-    note = mymidi.scale_to_note(scale_pct, c_penta_minor)
+    note = mymidi.scale_to_note(scale_pct, c_minor)
     #print note
 
     #Translate that note to a MIDI pitch

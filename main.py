@@ -13,6 +13,7 @@ mymidi = MIDITime(120, 'main.mid', 12, 3, 3)
 
 
 my_data = [
+    {'event_date': '01-07-2012', 'fatalities': 0},
     {'event_date': '20-07-2012', 'fatalities': 12.0},
     {'event_date': '05-08-2012', 'fatalities': 7.0},
     {'event_date': '27-09-2012', 'fatalities': 7.0},

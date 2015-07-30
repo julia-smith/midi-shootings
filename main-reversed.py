@@ -21,7 +21,8 @@ my_data = [
     {'event_date': '16-09-2013', 'fatalities': 13.0},
     {'event_date': '23-05-2014', 'fatalities': 7.0},
     {'event_date': '18-06-2015', 'fatalities': 9.0},
-    {'event_date': '16-07-2015', 'fatalities': 5.0}
+    {'event_date': '16-07-2015', 'fatalities': 5.0},
+    {'event_date': '01-08-2015', 'fatalities': 5.0} #add another to extend the midi file to the appropriate length (starting in Aug. 2015)
 ]
 
 my_data_epoched = [{'days_since_epoch': mymidi.days_since_epoch(datetime.datetime.strptime(d['event_date'], '%d-%m-%Y')), 'fatalities': d['fatalities']} for d in my_data]
@@ -75,7 +76,7 @@ note_list = []
 for d in my_data_timed:
     for x in xrange(0, int(d['fatalities'])):
         note_list.append([
-            (d['beat'] + start_time)*-1, #multiply by negative 1 to reverse midi track (start at present, go to past) GO BACK IN TIME
+            (d['beat'] - start_time)*-1, #multiply by negative 1 to reverse midi track (start at present, go to past) GO BACK IN TIME
             mag_to_pitch_tuned(d['fatalities']), #mag_to_pitch_tuned(d['fatalities']),
             100,  # attack
             mag_to_duration(d['fatalities']) #1  # duration, in beats

@@ -3,7 +3,7 @@ from miditime.MIDITime import MIDITime
 
 # Instantiate the class with a tempo (120bpm is the default), an output file destination, number of seconds to represent a year, base octave (5 is Middle C), and octave range.
 #mymidi = MIDITime(120, 'chords.mid')
-mymidi = MIDITime(120, 'wayback.mid', 12, 4, 4)
+mymidi = MIDITime(120, 'wayback.mid', 6, 3, 5) #4 was good for # of seconds for year
 
 # Create a list of notes. Each note is a list: [time, pitch, attack, duration]
 # midinotes = [
@@ -13,626 +13,3212 @@ mymidi = MIDITime(120, 'wayback.mid', 12, 4, 4)
 
 
 my_data = [
-    #{'event_date': '01-07-2012', 'fatalities': 5.0, 'total': 5.0}, #add extra to extend the midi file to the appropriate length (starting in Aug. 2015)
-    {'event_date': '18-06-2015', 'fatalities': 1.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 2.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 3.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 4.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 5.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 6.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 7.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 8.0, 'total': 9.0},
-    {'event_date': '18-06-2015', 'fatalities': 9.0, 'total': 9.0},
-    {'event_date': '16-07-2015', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '16-07-2015', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '16-07-2015', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '16-07-2015', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '16-07-2015', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '23-05-2014', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '23-05-2014', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '20-02-2014', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '20-02-2014', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '20-02-2014', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '20-02-2014', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '24-10-2014', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '24-10-2014', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '24-10-2014', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '24-10-2014', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '24-10-2014', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '07-06-2013', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '07-06-2013', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '07-06-2013', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '07-06-2013', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '07-06-2013', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '07-06-2013', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '16-09-2013', 'fatalities': 1.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 2.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 3.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 4.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 5.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 6.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 7.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 8.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 9.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 10.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 11.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 12.0, 'total': 13.0},
-    {'event_date': '16-09-2013', 'fatalities': 13.0, 'total': 13.0},
-    {'event_date': '26-07-2013', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '26-07-2013', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '26-07-2013', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '26-07-2013', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '26-07-2013', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '26-07-2013', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '21-04-2013', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '21-04-2013', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '21-04-2013', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '21-04-2013', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '21-04-2013', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '13-03-2013', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '13-03-2013', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '13-03-2013', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '13-03-2013', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '13-03-2013', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '20-07-2012', 'fatalities': 1.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 2.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 3.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 4.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 5.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 6.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 7.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 8.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 9.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 10.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 11.0, 'total': 12.0},
-    {'event_date': '20-07-2012', 'fatalities': 12.0, 'total': 12.0},
-    {'event_date': '05-08-2012', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '05-08-2012', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '27-09-2012', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '14-12-2012', 'fatalities': 1.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 2.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 3.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 4.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 5.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 6.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 7.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 8.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 9.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 10.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 11.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 12.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 13.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 14.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 15.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 16.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 17.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 18.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 19.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 20.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 21.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 22.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 23.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 24.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 25.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 26.0, 'total': 27.0},
-    {'event_date': '14-12-2012', 'fatalities': 27.0, 'total': 27.0},
-    {'event_date': '02-04-2012', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '02-04-2012', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '22-02-2012', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '22-02-2012', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '22-02-2012', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '22-02-2012', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '22-02-2012', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '20-05-2012', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '20-05-2012', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '20-05-2012', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '20-05-2012', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '20-05-2012', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '20-05-2012', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '16-04-2007', 'fatalities': 1.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 2.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 3.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 4.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 5.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 6.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 7.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 8.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 9.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 10.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 11.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 12.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 13.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 14.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 15.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 16.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 17.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 18.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 19.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 20.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 21.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 22.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 23.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 24.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 25.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 26.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 27.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 28.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 29.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 30.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 31.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 32.0, 'total': 33.0},
-    {'event_date': '16-04-2007', 'fatalities': 33.0, 'total': 33.0},
-    {'event_date': '16-10-1991', 'fatalities': 1.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 2.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 3.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 4.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 5.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 6.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 7.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 8.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 9.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 10.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 11.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 12.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 13.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 14.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 15.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 16.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 17.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 18.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 19.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 20.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 21.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 22.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 23.0, 'total': 24.0},
-    {'event_date': '16-10-1991', 'fatalities': 24.0, 'total': 24.0},
-    {'event_date': '18-07-1984', 'fatalities': 1.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 2.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 3.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 4.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 5.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 6.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 7.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 8.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 9.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 10.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 11.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 12.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 13.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 14.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 15.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 16.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 17.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 18.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 19.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 20.0, 'total': 21.0},
-    {'event_date': '18-07-1984', 'fatalities': 21.0, 'total': 21.0},
-    {'event_date': '20-08-1986', 'fatalities': 1.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 2.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 3.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 4.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 5.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 6.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 7.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 8.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 9.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 10.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 11.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 12.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 13.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 14.0, 'total': 15.0},
-    {'event_date': '20-08-1986', 'fatalities': 15.0, 'total': 15.0},
-    {'event_date': '05-11-2009', 'fatalities': 1.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 2.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 3.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 4.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 5.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 6.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 7.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 8.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 9.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 10.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 11.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 12.0, 'total': 13.0},
-    {'event_date': '05-11-2009', 'fatalities': 13.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 1.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 2.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 3.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 4.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 5.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 6.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 7.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 8.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 9.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 10.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 11.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 12.0, 'total': 13.0},
-    {'event_date': '03-04-2009', 'fatalities': 13.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 1.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 2.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 3.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 4.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 5.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 6.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 7.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 8.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 9.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 10.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 11.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 12.0, 'total': 13.0},
-    {'event_date': '20-04-1999', 'fatalities': 13.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 1.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 2.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 3.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 4.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 5.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 6.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 7.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 8.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 9.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 10.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 11.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 12.0, 'total': 13.0},
-    {'event_date': '18-02-1983', 'fatalities': 13.0, 'total': 13.0},
-    {'event_date': '29-07-1999', 'fatalities': 1.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 2.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 3.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 4.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 5.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 6.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 7.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 8.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 9.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 10.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 11.0, 'total': 12.0},
-    {'event_date': '29-07-1999', 'fatalities': 12.0, 'total': 12.0},
-    {'event_date': '10-03-2009', 'fatalities': 1.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 2.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 3.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 4.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 5.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 6.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 7.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 8.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 9.0, 'total': 10.0},
-    {'event_date': '10-03-2009', 'fatalities': 10.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 1.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 2.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 3.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 4.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 5.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 6.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 7.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 8.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 9.0, 'total': 10.0},
-    {'event_date': '21-03-2005', 'fatalities': 10.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 1.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 2.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 3.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 4.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 5.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 6.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 7.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 8.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 9.0, 'total': 10.0},
-    {'event_date': '18-06-1990', 'fatalities': 10.0, 'total': 10.0},
-    {'event_date': '14-10-2011', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '14-10-2011', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '03-08-2010', 'fatalities': 1.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 2.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 3.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 4.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 5.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 6.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 7.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 8.0, 'total': 9.0},
-    {'event_date': '03-08-2010', 'fatalities': 9.0, 'total': 9.0},
-    {'event_date': '19-01-2010', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '19-01-2010', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '29-03-2009', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '05-12-2007', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '01-07-1993', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '14-09-1989', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '20-08-1982', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '17-01-1989', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '17-01-1989', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '17-01-1989', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '17-01-1989', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '17-01-1989', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '11-01-1991', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '11-01-1991', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '11-01-1991', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '11-01-1991', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '11-01-1991', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '11-01-1991', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '01-05-1992', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '01-05-1992', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '01-05-1992', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '01-05-1992', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '07-12-1993', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '07-12-1993', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '07-12-1993', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '07-12-1993', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '07-12-1993', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '07-12-1993', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '24-03-1998', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '24-03-1998', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '24-03-1998', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '24-03-1998', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '24-03-1998', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '29-07-1999', 'fatalities': 1.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 2.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 3.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 4.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 5.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 6.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 7.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 8.0, 'total': 9.0},
-    {'event_date': '29-07-1999', 'fatalities': 9.0, 'total': 9.0},
-    {'event_date': '15-09-1999', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '15-09-1999', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '02-11-1999', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '26-12-2000', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '08-07-2003', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '02-10-2006', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '02-10-2006', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '02-10-2006', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '02-10-2006', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '02-10-2006', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '25-03-2006', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '25-03-2006', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '30-01-2006', 'fatalities': 1.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 2.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 3.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 4.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 5.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 6.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 7.0, 'total': 8.0},
-    {'event_date': '30-01-2006', 'fatalities': 8.0, 'total': 8.0},
-    {'event_date': '12-02-2007', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '12-02-2007', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '12-02-2007', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '12-02-2007', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '12-02-2007', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '14-02-2008', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '14-02-2008', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '14-02-2008', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '14-02-2008', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '14-02-2008', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '14-02-2008', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '06-09-2011', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '06-09-2011', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '06-09-2011', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '06-09-2011', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '06-09-2011', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '08-01-2011', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '08-01-2011', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '08-01-2011', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '08-01-2011', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '08-01-2011', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '08-01-2011', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '29-06-1984', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '23-04-1987', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '23-04-1987', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '16-02-1988', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '14-11-1991', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '14-11-1991', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '14-11-1991', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '14-11-1991', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '14-11-1991', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '15-10-1992', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '15-10-1992', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '15-10-1992', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '15-10-1992', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '15-10-1992', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '06-08-1993', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '06-08-1993', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '06-08-1993', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '06-08-1993', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '14-12-1993', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '14-12-1993', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '14-12-1993', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '14-12-1993', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '20-06-1994', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '20-06-1994', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '20-06-1994', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '20-06-1994', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '20-06-1994', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '03-04-1995', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '03-04-1995', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '03-04-1995', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '03-04-1995', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '03-04-1995', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '03-04-1995', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '09-02-1996', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '15-09-1997', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '15-09-1997', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '15-09-1997', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '15-09-1997', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '18-02-1997', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '18-02-1997', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '18-02-1997', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '18-02-1997', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '18-02-1997', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '21-05-1998', 'fatalities': 1.0, 'total': 4.0},
-    {'event_date': '21-05-1998', 'fatalities': 2.0, 'total': 4.0},
-    {'event_date': '21-05-1998', 'fatalities': 3.0, 'total': 4.0},
-    {'event_date': '21-05-1998', 'fatalities': 4.0, 'total': 4.0},
-    {'event_date': '06-03-1998', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '06-03-1998', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '06-03-1998', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '06-03-1998', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '06-03-1998', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '05-02-2001', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '05-02-2001', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '05-02-2001', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '05-02-2001', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '05-02-2001', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '08-12-2004', 'fatalities': 1.0, 'total': 5.0},
-    {'event_date': '08-12-2004', 'fatalities': 2.0, 'total': 5.0},
-    {'event_date': '08-12-2004', 'fatalities': 3.0, 'total': 5.0},
-    {'event_date': '08-12-2004', 'fatalities': 4.0, 'total': 5.0},
-    {'event_date': '08-12-2004', 'fatalities': 5.0, 'total': 5.0},
-    {'event_date': '03-12-2005', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '03-12-2005', 'fatalities': 7.0, 'total': 7.0},
-    {'event_date': '07-10-2007', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '07-10-2007', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '07-10-2007', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '07-10-2007', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '07-10-2007', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '07-10-2007', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '25-06-2008', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 1.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 2.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 3.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 4.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 5.0, 'total': 6.0},
-    {'event_date': '07-02-2008', 'fatalities': 6.0, 'total': 6.0},
-    {'event_date': '02-04-2009', 'fatalities': 1.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 2.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 3.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 4.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 5.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 6.0, 'total': 7.0},
-    {'event_date': '02-04-2009', 'fatalities': 7.0, 'total': 7.0}
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 1,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 2,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 3,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 4,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 5,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 6,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 7,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 8,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 9,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 10,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 11,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 12,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "09-05-1949",
+    #     "fatalityid": 13,
+    #     "total": 13
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 1,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 2,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 3,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 4,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 5,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 6,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 7,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 8,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 9,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 10,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 11,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 12,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 13,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 14,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 15,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 16,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 17,
+    #     "total": 18
+    # },
+    # {
+    #     "eventdate": "08-01-1966",
+    #     "fatalityid": 18,
+    #     "total": 18
+    # },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "08-20-1982",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 1,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 2,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 3,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 4,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 5,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 6,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 7,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 8,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 9,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 10,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 11,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 12,
+        "total": 13
+    },
+    {
+        "eventdate": "02-18-1983",
+        "fatalityid": 13,
+        "total": 13
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "06-29-1984",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 1,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 2,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 3,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 4,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 5,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 6,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 7,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 8,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 9,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 10,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 11,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 12,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 13,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 14,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 15,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 16,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 17,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 18,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 19,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 20,
+        "total": 21
+    },
+    {
+        "eventdate": "07-18-1984",
+        "fatalityid": 21,
+        "total": 21
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 1,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 2,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 3,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 4,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 5,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 6,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 7,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 8,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 9,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 10,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 11,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 12,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 13,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 14,
+        "total": 15
+    },
+    {
+        "eventdate": "08-20-1986",
+        "fatalityid": 15,
+        "total": 15
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "04-23-1987",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "02-16-1988",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "01-17-1989",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "01-17-1989",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "01-17-1989",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "01-17-1989",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "01-17-1989",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "09-14-1989",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 1,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 2,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 3,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 4,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 5,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 6,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 7,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 8,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 9,
+        "total": 10
+    },
+    {
+        "eventdate": "06-18-1990",
+        "fatalityid": 10,
+        "total": 10
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "01-11-1991",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 1,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 2,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 3,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 4,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 5,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 6,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 7,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 8,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 9,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 10,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 11,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 12,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 13,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 14,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 15,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 16,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 17,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 18,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 19,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 20,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 21,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 22,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 23,
+        "total": 24
+    },
+    {
+        "eventdate": "10-16-1991",
+        "fatalityid": 24,
+        "total": 24
+    },
+    {
+        "eventdate": "11-14-1991",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "11-14-1991",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "11-14-1991",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "11-14-1991",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "11-14-1991",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "05-01-1992",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "05-01-1992",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "05-01-1992",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "05-01-1992",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "10-15-1992",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "10-15-1992",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "10-15-1992",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "10-15-1992",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "10-15-1992",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "07-01-1993",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "08-06-1993",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "08-06-1993",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "08-06-1993",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "08-06-1993",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "12-07-1993",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "12-14-1993",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "12-14-1993",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "12-14-1993",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "12-14-1993",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "06-20-1994",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "06-20-1994",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "06-20-1994",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "06-20-1994",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "06-20-1994",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "04-03-1995",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "02-09-1996",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "02-18-1997",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "02-18-1997",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "02-18-1997",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "02-18-1997",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "02-18-1997",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "09-15-1997",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "09-15-1997",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "09-15-1997",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "09-15-1997",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "03-06-1998",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "03-06-1998",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "03-06-1998",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "03-06-1998",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "03-06-1998",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "03-24-1998",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "03-24-1998",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "03-24-1998",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "03-24-1998",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "03-24-1998",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "05-21-1998",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "05-21-1998",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "05-21-1998",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "05-21-1998",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 1,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 2,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 3,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 4,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 5,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 6,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 7,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 8,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 9,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 10,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 11,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 12,
+        "total": 13
+    },
+    {
+        "eventdate": "04-20-1999",
+        "fatalityid": 13,
+        "total": 13
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 1,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 2,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 3,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 4,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 5,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 6,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 7,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 8,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 9,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 10,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 11,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 12,
+        "total": 12
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 1,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 2,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 3,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 4,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 5,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 6,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 7,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 8,
+        "total": 9
+    },
+    {
+        "eventdate": "07-29-1999",
+        "fatalityid": 9,
+        "total": 9
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "09-15-1999",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "11-02-1999",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "12-26-2000",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "02-05-2001",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "02-05-2001",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "02-05-2001",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "02-05-2001",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "02-05-2001",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "07-08-2003",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "12-08-2004",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "12-08-2004",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "12-08-2004",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "12-08-2004",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "12-08-2004",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 1,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 2,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 3,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 4,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 5,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 6,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 7,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 8,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 9,
+        "total": 10
+    },
+    {
+        "eventdate": "03-21-2005",
+        "fatalityid": 10,
+        "total": 10
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "12-03-2005",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "01-30-2006",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "03-25-2006",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "10-02-2006",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "10-02-2006",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "10-02-2006",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "10-02-2006",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "10-02-2006",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "02-12-2007",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "02-12-2007",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "02-12-2007",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "02-12-2007",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "02-12-2007",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 1,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 2,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 3,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 4,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 5,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 6,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 7,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 8,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 9,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 10,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 11,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 12,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 13,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 14,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 15,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 16,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 17,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 18,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 19,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 20,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 21,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 22,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 23,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 24,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 25,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 26,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 27,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 28,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 29,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 30,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 31,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 32,
+        "total": 33
+    },
+    {
+        "eventdate": "04-16-2007",
+        "fatalityid": 33,
+        "total": 33
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "10-07-2007",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "12-05-2007",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "02-07-2008",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "02-14-2008",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "06-25-2008",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 1,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 2,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 3,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 4,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 5,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 6,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 7,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 8,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 9,
+        "total": 10
+    },
+    {
+        "eventdate": "03-10-2009",
+        "fatalityid": 10,
+        "total": 10
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "03-29-2009",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2009",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 1,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 2,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 3,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 4,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 5,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 6,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 7,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 8,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 9,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 10,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 11,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 12,
+        "total": 13
+    },
+    {
+        "eventdate": "04-03-2009",
+        "fatalityid": 13,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 1,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 2,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 3,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 4,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 5,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 6,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 7,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 8,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 9,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 10,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 11,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 12,
+        "total": 13
+    },
+    {
+        "eventdate": "11-05-2009",
+        "fatalityid": 13,
+        "total": 13
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "01-19-2010",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 1,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 2,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 3,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 4,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 5,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 6,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 7,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 8,
+        "total": 9
+    },
+    {
+        "eventdate": "08-03-2010",
+        "fatalityid": 9,
+        "total": 9
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "01-08-2011",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "09-06-2011",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "09-06-2011",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "09-06-2011",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "09-06-2011",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "09-06-2011",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 1,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 2,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 3,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 4,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 5,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 6,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 7,
+        "total": 8
+    },
+    {
+        "eventdate": "10-14-2011",
+        "fatalityid": 8,
+        "total": 8
+    },
+    {
+        "eventdate": "02-22-2012",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "02-22-2012",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "02-22-2012",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "02-22-2012",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "02-22-2012",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "04-02-2012",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "05-20-2012",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 1,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 2,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 3,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 4,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 5,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 6,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 7,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 8,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 9,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 10,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 11,
+        "total": 12
+    },
+    {
+        "eventdate": "07-20-2012",
+        "fatalityid": 12,
+        "total": 12
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "08-05-2012",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "09-27-2012",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 1,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 2,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 3,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 4,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 5,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 6,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 7,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 8,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 9,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 10,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 11,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 12,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 13,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 14,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 15,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 16,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 17,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 18,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 19,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 20,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 21,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 22,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 23,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 24,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 25,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 26,
+        "total": 27
+    },
+    {
+        "eventdate": "12-14-2012",
+        "fatalityid": 27,
+        "total": 27
+    },
+    {
+        "eventdate": "03-13-2013",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "03-13-2013",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "03-13-2013",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "03-13-2013",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "03-13-2013",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "04-21-2013",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "04-21-2013",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "04-21-2013",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "04-21-2013",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "04-21-2013",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "06-07-2013",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 1,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 2,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 3,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 4,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 5,
+        "total": 6
+    },
+    {
+        "eventdate": "07-26-2013",
+        "fatalityid": 6,
+        "total": 6
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 1,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 2,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 3,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 4,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 5,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 6,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 7,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 8,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 9,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 10,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 11,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 12,
+        "total": 13
+    },
+    {
+        "eventdate": "09-16-2013",
+        "fatalityid": 13,
+        "total": 13
+    },
+    {
+        "eventdate": "02-20-2014",
+        "fatalityid": 1,
+        "total": 4
+    },
+    {
+        "eventdate": "02-20-2014",
+        "fatalityid": 2,
+        "total": 4
+    },
+    {
+        "eventdate": "02-20-2014",
+        "fatalityid": 3,
+        "total": 4
+    },
+    {
+        "eventdate": "02-20-2014",
+        "fatalityid": 4,
+        "total": 4
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 1,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 2,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 3,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 4,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 5,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 6,
+        "total": 7
+    },
+    {
+        "eventdate": "05-23-2014",
+        "fatalityid": 7,
+        "total": 7
+    },
+    {
+        "eventdate": "10-24-2014",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "10-24-2014",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "10-24-2014",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "10-24-2014",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "10-24-2014",
+        "fatalityid": 5,
+        "total": 5
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 1,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 2,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 3,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 4,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 5,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 6,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 7,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 8,
+        "total": 9
+    },
+    {
+        "eventdate": "06-18-2015",
+        "fatalityid": 9,
+        "total": 9
+    },
+    {
+        "eventdate": "07-16-2015",
+        "fatalityid": 1,
+        "total": 5
+    },
+    {
+        "eventdate": "07-16-2015",
+        "fatalityid": 2,
+        "total": 5
+    },
+    {
+        "eventdate": "07-16-2015",
+        "fatalityid": 3,
+        "total": 5
+    },
+    {
+        "eventdate": "07-16-2015",
+        "fatalityid": 4,
+        "total": 5
+    },
+    {
+        "eventdate": "07-16-2015",
+        "fatalityid": 5,
+        "total": 5
+    }
 ]
 
-my_data_epoched = [{'days_since_epoch': mymidi.days_since_epoch(datetime.datetime.strptime(d['event_date'], '%d-%m-%Y')), 'fatalities': d['fatalities'], 'total': d['total']} for d in my_data]
+my_data_epoched = [{'days_since_epoch': mymidi.days_since_epoch(datetime.datetime.strptime(d['eventdate'], '%m-%d-%Y')), 'fatalityid': d['fatalityid'], 'total': d['total']} for d in my_data]
 
-my_data_timed = [{'beat': mymidi.beat(d['days_since_epoch']), 'fatalities': d['fatalities'], 'total': d['total']} for d in my_data_epoched]
+my_data_timed = [{'beat': mymidi.beat(d['days_since_epoch']), 'fatalityid': d['fatalityid'], 'total': d['total']} for d in my_data_epoched]
 
 start_time = my_data_timed[0]['beat']
 
 def mag_to_pitch_tuned(fatalities):
     # Where does this data point sit in the domain of your data? (I.E. the min fatalities is 5, the max in 27). In this case the optional 'True' means the scale is reversed, so the highest value will return the lowest percentage.
-    scale_pct = mymidi.linear_scale_pct(0, 27, fatalities, True)
+    scale_pct = mymidi.linear_scale_pct(1, 34, fatalities, True)
 
     # Another option: Linear scale, reverse order
     # scale_pct = mymidi.linear_scale_pct(3, 5.7, fatalities, True)
@@ -649,7 +3235,6 @@ def mag_to_pitch_tuned(fatalities):
 
     #Find the note that matches your data point
     note = mymidi.scale_to_note(scale_pct, c_minor)
-    #print note
 
     #Translate that note to a MIDI pitch
     midi_pitch = mymidi.note_to_midi_pitch(note)
@@ -658,7 +3243,7 @@ def mag_to_pitch_tuned(fatalities):
 
 def mag_to_duration(fatalities):
     # Where does this data point sit in the domain of your data? (I.E. the min fatalities is 5, the max in 27). In this case the optional 'True' means the scale is reversed, so the highest value will return the lowest percentage.
-    scale_pct = mymidi.linear_scale_pct(0, 28, fatalities, False)
+    scale_pct = mymidi.linear_scale_pct(0, 34, fatalities, False)
 
     # Another option: Linear scale, reverse order
     # scale_pct = mymidi.linear_scale_pct(3, 5.7, fatalities, True)
@@ -667,34 +3252,35 @@ def mag_to_duration(fatalities):
     # scale_pct = mymidi.log_scale_pct(3, 5.7, fatalities, True)
 
     #Translate that note to a MIDI duration
-    midi_duration = 10 + scale_pct*12
+    midi_duration = 10 + scale_pct*20
 
     return midi_duration
 
 def mag_to_attack(total):
     # Where does this data point sit in the domain of your data? (I.E. the min fatalities is 5, the max in 27). In this case the optional 'True' means the scale is reversed, so the highest value will return the lowest percentage.
-    scale_pct = mymidi.linear_scale_pct(0, 28, total, False)
+    scale_pct = mymidi.linear_scale_pct(0, 34, total, False)
 
     #Translate that note to a MIDI duration
-    midi_attack = 50 + scale_pct*100
-    print midi_attack
+    midi_attack = 50 + scale_pct*70
 
     return midi_attack
 
 
 note_list = []
 
-#print my_data_timed
-
-for d in my_data_timed:
+#for d in my_data_timed:
+for index, d in enumerate(my_data_timed):
+    print d
+    print index
 
     note_list.append([
-        (d['beat'] - start_time), #multiply by negative 1 to reverse midi track (start at present, go to past) GO BACK IN TIME
-        mag_to_pitch_tuned(d['fatalities']),
-        mag_to_attack(d['total']),#50,  # attack
-        mag_to_duration(d['total'])#16 #mag_to_duration(d['fatalities']) #1  # duration, in beats
+        (d['beat'] + index*.075 - start_time), #multiply by negative 1 to reverse midi track (start at present, go to past) GO BACK IN TIME
+        mag_to_pitch_tuned(float(d['fatalityid'])),
+        mag_to_attack(float(d['total'])),#50,  # attack
+        mag_to_duration(float(d['total']))#16 #mag_to_duration(d['fatalities']) #1  # duration, in beats
     ])
 
+#print note_list
 
 
 # Add a track with those notes

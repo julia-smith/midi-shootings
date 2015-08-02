@@ -1,3 +1,5 @@
+import datetime
+
 my_data = [
     {'event_date': '18-06-2015', 'fatalities': 9.0},
     {'event_date': '16-07-2015', 'fatalities': 5.0},
@@ -6,7 +8,7 @@ my_data = [
     {'event_date': '24-10-2014', 'fatalities': 5.0},
     {'event_date': '07-06-2013', 'fatalities': 6.0},
     {'event_date': '16-09-2013', 'fatalities': 13.0},
-    {'event_date': '07-26-2013', 'fatalities': 6.0},
+    {'event_date': '26-07-2013', 'fatalities': 6.0},
     {'event_date': '21-04-2013', 'fatalities': 5.0},
     {'event_date': '13-03-2013', 'fatalities': 5.0},
     {'event_date': '20-07-2012', 'fatalities': 12.0},
@@ -82,15 +84,10 @@ data_by_frequency = []
 
 for d in my_data:
     for x in xrange(0, int(d['fatalities'])):
-        #print {'event_date': d['event_date'], 'fatalities': float(x+1), 'total': d['fatalities']}
+        #json
+        #print "{'event_date': '" + str(d['event_date']) + "', 'fatalities': " + str(float(x+1)) + ", 'total': " + str(d['fatalities']) + "},"
 
-        print "{'event_date': '" + str(d['event_date']) + "', 'fatalities': " + str(float(x+1)) + ", 'total': " + str(d['fatalities']) + "},"
-
-
-
-        # data_by_frequency.append(
-        #     {'event_date': d['event_date'], 'total': d['fatalities'], 'fatalities': float(x+1)}
-        # )
+        #csv
+        print str( datetime.datetime.strptime(d['event_date'], '%d-%m-%Y') ) + ", " + str(float(x+1)) + ", " + str(d['fatalities'])
 
 
-#print data_by_frequency

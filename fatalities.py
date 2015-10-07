@@ -353,22 +353,27 @@ my_data = [
     {
         "date": "02-20-2014",
         "fatalities": 4,
-        "location": "Alturas, CA"
+        "location": "Alturas, California"
     },
     {
         "date": "10-24-2014",
         "fatalities": 5,
-        "location": "Marysville, WA"
+        "location": "Marysville, Washington"
     },
     {
         "date": "06-17-2015",
         "fatalities": 9,
-        "location": "Charleston, SC"
+        "location": "Charleston, South Carolina"
     },
     {
         "date": "07-16-2015",
         "fatalities": 5,
-        "location": "Chattanooga, TN"
+        "location": "Chattanooga, Tennessee"
+    },
+    {
+        "date": "10-01-2015",
+        "fatalities": 9,
+        "location": "Roseburg, Oregon"
     }
 ]
 
